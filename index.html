@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="font/flaticon.css">
+
+    <title>Jquery</title>
+  </head>
+  <body>
+
+    <div class="container-fluid">
+      <div id="particles"></div>
+          <i class="flaticon-settings set-icon-pos-1" id="set-icon"></i>
+          <div class="theme-pos-1" id="theme">
+            <button class="theme1"></button>
+            <button class="theme2"></button>
+            <button class="theme3"></button>
+            <button class="theme4"></button>
+          </div>
+          <div class="nav justify-content-center align-items-center">
+            <div class="calc">
+              <input type="text" class="form-control btn-display" disabled id="display">
+              <button class="btn btn-const" id="one" onclick="one()">1</button>
+              <button class="btn btn-const" id="two" onclick="two()">2</button>
+              <button class="btn btn-const" id="three" onclick="three()">3</button>
+              <button class="btn btn-modify" id="del" onclick="del()">DEL</button>
+              <button class="btn btn-const" id="four" onclick="four()">4</button>
+              <button class="btn btn-const" id="five" onclick="five()">5</button>
+              <button class="btn btn-const" id="six" onclick="six()">6</button>
+              <button class="btn btn-modify" id="reset" onclick="reset()">RES</button>
+              <button class="btn btn-const" id="seven" onclick="seven()">7</button>
+              <button class="btn btn-const" id="eight" onclick="eight()">8</button>
+              <button class="btn btn-const" id="nine" onclick="nine()">9</button>
+              <button class="btn btn-operator" id="add" onclick="add()">+</button>
+              <button class="btn btn-operator" id="pow" onclick="pow()"><i class="flaticon-superscript-x-elevated-to-the-power-of-two"></i></button>
+              <button class="btn btn-const" id="zero" onclick="zero()">0</button>
+              <button class="btn btn-operator" id="sqrt" onclick="sqrt()"><i class="flaticon-square-root-mathematical-symbol"></i></button>
+              <button class="btn btn-operator" id="sub" onclick="sub()">-</button>
+              <button class="btn btn-operator" id="equal" onclick="equal()">=</button>
+              <button class="btn btn-operator" id="percent" onclick="percent()">%</button>
+              <button class="btn btn-operator" id="mul" onclick="multiply()">x</button>
+              <button class="btn btn-operator" id="div" onclick="division()"><i class="flaticon-division"></i></button>
+            </div>
+          </div>
+    </div>
+
+    <script>
+      var display=document.getElementById('display');
+      function one(){
+      display.value+=1;
+      }
+      function two(){
+      display.value+=2;
+      }
+      function three(){
+      display.value+=3;
+      }
+      function four(){
+      display.value+=4;
+      }
+      function five(){
+      display.value+=5;
+      }
+      function six(){
+      display.value+=6;
+      }
+      function seven(){
+      display.value+=7;
+      }
+      function eight(){
+      display.value+=8;
+      }
+      function nine(){
+      display.value+=9;
+      }
+      function zero(){
+      display.value+=0;
+      }
+      function add(){
+      display.value+="+";
+      }
+      function sub(){
+      display.value+="-";
+      }
+      function multiply(){
+      display.value+="*";
+      }
+      function division(){
+      display.value+="/";
+      }
+      function pow(){
+      display.value= Math.pow(display.value,2);
+      }
+      function sqrt(){
+      display.value= Math.sqrt(display.value);
+      }
+      function equal(){
+      display.value=eval(display.value);
+      }
+      function percent(){
+        display.value=eval(display.value)/100;
+      }
+      function del(){
+        display.value = display.value.substr(0, display.value.length-1);
+      }
+      function reset(){
+        display.value="";
+      }
+    </script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/particles.min.js"></script>
+    <script src="js/app.js"></script>
+
+  </body>
+</html>
